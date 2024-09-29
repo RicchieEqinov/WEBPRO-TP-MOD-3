@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Pribadi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background-color: #fff;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
+        .info-table {
+            margin-top: 20px;
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .info-table th, .info-table td {
+            padding: 10px;
+            text-align: left;
+            border: 1px solid #ccc;
+        }
+        .info-table th {
+            background-color: #f0f0f0;
+        }
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        form {
+            margin-top: 30px;
+        }
+        form input, form button {
+            padding: 10px;
+            margin: 5px 0;
+            width: 100%;
+        }
+        a {
+            text-decoration: none;
+            color: #007BFF;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- div digunakan untuk mengelompokkan konten dan memberikan gaya atau layout -->
+        <h1>Profile Pribadi</h1>
+
+        <!-- img digunakan untuk menampilkan gambar. Ini adalah foto profil pengguna -->
+        <img src="../eqinov.jpg" alt="Foto Profil" class="profile-img">
+        
+        <!-- table digunakan untuk menampilkan informasi pengguna dalam format tabel -->
+        <table class="info-table">
+            <!-- tr digunakan untuk menampung baris data dalam tabel -->
+            <tr>
+                <!-- th digunakan untuk mendefinisikan header kolom dalam tabel -->
+                <th>Nama</th>
+                <!-- td digunakan untuk menampung data dalam sel tabel -->
+                <td>Ricchie Eqinov Tandumay</td>
+            </tr>
+            <tr>
+                <th>Umur</th>
+                <td>21 Tahun</td>
+            </tr>
+            <tr>
+                <th>Alamat</th>
+                <td>Gang PGA No.54</td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td>ekhytandumay@gmail.com</td>
+            </tr>
+        </table>
+
+        <!-- video digunakan untuk menyematkan video di halaman web -->
+        <div class="video-container">
+            <h3>Video Perkenalan</h3>
+            <video width="400" controls>
+                <source src="video-profile.mp4" type="video/mp4">
+            </video>
+        </div>
+
+        <!-- form digunakan untuk menerima input dari pengguna -->
+        <form action="submit-profile.php" method="POST">
+            <h3>Kirim Pesan</h3>
+
+            <!-- input digunakan untuk menerima data teks dari pengguna -->
+            <input type="text" name="nama" placeholder="Nama Anda">
+            <input type="email" name="email" placeholder="Email Anda">
+            <textarea name="pesan" rows="4" placeholder="Tulis pesan Anda di sini..."></textarea>
+            
+            <!-- button digunakan untuk mengirim form -->
+            <button type="submit">Kirim</button>
+        </form>
+    </div>
+
+</body>
+</html>
